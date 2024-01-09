@@ -6,11 +6,15 @@
     <title>App Updater</title>
 </head>
 <body>
-    <a id="the-download-element" href="app-release-unsigned.apk"></a>
+    <a id="the-download-element"/>
 
     <script>
+        const apkFileName = "apk-debug.apk"
+
         document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector("#the-download-element").click();
+            let theDownloadElement = document.querySelector("#the-download-element");        
+            theDownloadElement.setAttribute("href", apkFileName);
+            theDownloadElement.click();
         });
     </script>
 </body>
